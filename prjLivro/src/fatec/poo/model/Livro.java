@@ -43,7 +43,7 @@ public class Livro {
             return multa;
         } else {
             System.out.println("O livro já está disponível");
-            return 0.0;
+            return 0;
         }
     }
 }
