@@ -10,17 +10,22 @@ import java.util.Scanner;
 public class Aplic {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);       
-        
+        ContaCorrente[] objConta = new ContaCorrente[10];
         
         int num, opcao;
         double valSaldo, valSaq, valDep;   
         
-        System.out.println("Digite o número da conta: ");
-        num = entrada.nextInt();
-        System.out.println("Digite o valor do saldo inicial: ");
-        valSaldo = entrada.nextDouble();
         
-        ContaCorrente objConta = new ContaCorrente(num, valSaldo);
+        for(int i = 0; i < 10 ; i++){
+            System.out.println("Digite o número da conta: ");
+            num = entrada.nextInt();
+            System.out.println("Digite o valor do saldo inicial: ");
+            valSaldo = entrada.nextDouble();
+            
+            objConta[i] = new ContaCorrente(num,valSaldo);
+       
+        }
+        
         
         do{
             System.out.println("\n\n1 - Depositar");
